@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Menu";
+import { GlobalStyle } from "./globalstyles";
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./components/DarkMode";
+import { ThemeChanger } from "./components/DarkMode/ThemeStyles";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <ThemeChanger>
+          <GlobalStyle />
+          <Navbar />
+          <button onClick={() => themeToggler()}> Change Theme </button>
+          <HeroSection />
+          <Footer />
+        </ThemeChanger>
+      </ThemeProvider>
+    </Router>
   );
 }
 
