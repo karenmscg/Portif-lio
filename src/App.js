@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./components/DarkMode";
 import { ThemeChanger } from "./components/DarkMode/ThemeStyles";
+import { Button } from "./components/HeroSection/HeroSection";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,7 +21,7 @@ function App() {
         <ThemeChanger>
           <GlobalStyle />
           <Navbar />
-          <button onClick={() => themeToggler()}> Change Theme </button>
+          <Button onClick={() => themeToggler()}> My Dark Mode </Button>
           <HeroSection />
           <Footer />
         </ThemeChanger>

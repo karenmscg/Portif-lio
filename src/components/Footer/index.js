@@ -1,20 +1,22 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FooterContainer, MidiasSociais,IconsMidias, MidiaLink } from "./Footer";
+
+import { FooterContainer, A, P1 } from "./Footer";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <MidiasSociais>
-        <IconsMidias>
-          <MidiaLink href="/" target="_blank" aria-label="Linkedin">
-            <FaLinkedin />
-          </MidiaLink>
-          <MidiaLink href="/" target="_blank" aria-label="GitHub">
-            <FaGithub />
-          </MidiaLink>
-        </IconsMidias>
-      </MidiasSociais>
+      <P1>Developed by Káren Myllena Gonçalves</P1>
+      <A
+        href="https://www.linkedin.com/in/k%C3%A1ren-myllena-gon%C3%A7alves-425b181b2/"
+        target="_blank"
+        aria-label="Linkedin"
+      >
+        <FaLinkedin />
+      </A>
+      <A href="/" target="_blank" aria-label="GitHub">
+        <FaGithub />
+      </A>
     </FooterContainer>
   );
 };
