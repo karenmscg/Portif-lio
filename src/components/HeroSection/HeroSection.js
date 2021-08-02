@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   margin-left: 5%;
-  background-repeat: no-repeat;
-  background-size: 40%;
   display: flex;
   flex-direction: column;
 `;
@@ -22,7 +20,7 @@ export const Button = styled.button`
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.5));
   border-radius: 10px;
   margin-right: 5px;
-  overflow: hidden;
+  cursor: pointer;
 
   &:hover {
     color: black;

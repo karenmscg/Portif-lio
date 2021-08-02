@@ -1,13 +1,22 @@
+import {
+  MenuContainer,
+  Icon,
+  CloseIcon,
+  SideBarLink,
+  SideBarMenu,
+} from "./SideBar";
+
 const SideBar = () => {
   return (
-    <SideBarContainer>
+    <MenuContainer>
       <Icon>
         <CloseIcon />
       </Icon>
       <SideBarMenu>
-        <SideBarLink to="/"></SideBarLink>
+        <SideBarLink to="/about">About Me</SideBarLink>
+        <SideBarLink to="/works">My Works</SideBarLink>
       </SideBarMenu>
-    </SideBarContainer>
+    </MenuContainer>
   );
 };
 
