@@ -5,19 +5,14 @@ import { Link } from "react-router-dom";
 import logo from "../../Images/Logo.svg";
 import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
-  const [menuToggle, setMenuToggle] = useState(false);
-
-  const MenuMobile = () => {
-    setMenuToggle(!menuToggle);
-  };
+const Navbar = (toggle) => {
 
   return (
     <Menu>
-      <Link onClick={MenuMobile}>
+      <Link>
         <img src={logo} />
       </Link>
-      <MobileIcon>
+      <MobileIcon onClick = {toggle}>
         <FaBars />
       </MobileIcon>
       <NavMenu>

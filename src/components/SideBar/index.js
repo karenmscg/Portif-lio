@@ -6,9 +6,9 @@ import {
   SideBarMenu,
 } from "./SideBar";
 
-const SideBar = () => {
+const SideBar = ({menuToggle, toggle}) => {
   return (
-    <MenuContainer>
+    <MenuContainer menuToggle={menuToggle} onClick={toggle}>
       <Icon>
         <CloseIcon />
       </Icon>

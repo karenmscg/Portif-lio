@@ -1,21 +1,24 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import HeroSection from "../components/index";
-import Navbar from "../components/Menu/index";
-import Footer from "../components/Footer/index";
-import { ThemeChanger } from "./components/DarkMode/ThemeStyles";
+import React, { useState } from "react";
+import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Menu";
+import SideBar from "../components/SideBar";
 
 const Home = () => {
+
+  const [menuToggle, setMenuToggle] = useState(false)
+
+  const toggle = () => {
+    setMenuToggle(!menuToggle)
+  }
+
   return (
-    <Router>
-      <ThemeProvider>
-        <ThemeChanger>
-          <Navbar />
-          <HeroSection />
-          <Footer />
-        </ThemeChanger>
-      </ThemeProvider>
-    </Router>
+    <div> 
+     <Navbar />
+      <SideBar menuToggle = {menuToggle} toggle = {toggle}/>
+      <HeroSection />
+      <Footer />
+    </div>
   );
 };
 
