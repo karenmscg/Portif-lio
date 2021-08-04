@@ -26,8 +26,8 @@ function App() {
           <Button onClick={() => themeToggler()}> My Dark Mode </Button>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/ about" exact component={About} />
-            <Route path="/ works" component={Works} />
+            <Route path="/about" exact component={About} />
+            <Route path="/works" component={Works} />
           </Switch>
           <Footer />
         </ThemeChanger>

@@ -25,15 +25,9 @@ const Navbar = () => {
         {open ? <FaTimes /> : <FaBars />}
       </MobileIcon>
       <NavMenu onClick={menuToggle} open={open}>
-        <NavLinks onclick={closeMenu} to="/">
-          Home
-        </NavLinks>
-        <NavLinks onclick={closeMenu} to="/ about">
-          About Me
-        </NavLinks>
-        <NavLinks onclick={closeMenu} to="/ works">
-          My works
-        </NavLinks>
+        <NavLinks to="/">Home</NavLinks>
+        <NavLinks to="/about">About Me</NavLinks>
+        <NavLinks to="/works">My works</NavLinks>
       </NavMenu>
     </Menu>
   );

@@ -1,7 +1,10 @@
 import React from "react";
+import { FaGraduationCap } from "react-icons/fa";
 import { P, Img } from "../HeroSection/HeroSection";
-import myselImage from '../../Images/myself_pictures.jpeg'
-
+import myselImage from "../../Images/myself_pictures.jpeg";
+import reactLogo from "../../Images/react.svg";
+import jsLogo from "../../Images/javascript.svg";
+import htmlLogo from "../../Images/html5.svg";
 
 const HeroSectionAbout = () => {
   return (
@@ -13,9 +16,14 @@ const HeroSectionAbout = () => {
         exceptional team player, willing to maintain extensive communication,
         and always give my best.
       </P>
+      <FaGraduationCap />
+      <P>Information Systems 2018-2023 State University of Montes Claros</P>
       <h2>Technologies</h2>
       <P>Some technologies that I like to work:</P>
-      <Img src= {myselImage} />
+      <img src={reactLogo} />
+      <img src={jsLogo} />
+      <img src={htmlLogo} />
+      <Img src={myselImage} />
     </div>
   );
 };
