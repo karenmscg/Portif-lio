@@ -39,15 +39,18 @@ export const Img = styled.img`
 
 export const P = styled.p`
   width: 70%;
-  font-weight: bold;
+  font-weight: 400 bold;
   color: #888888;
-  margin: 2px;
 `;
+
+export const H4 = styled.h4 `
+ margin-right: 2px;
+`
 
 export const H1 = styled.h1`
   font-size: 48px;
   line-height: 72px;
-  font-weight: bold;
+  font-weight: 800;
   color: #8a599b;
   margin: 2px;
 `;
@@ -56,4 +59,12 @@ export const H2 = styled.h2`
   margin-top: 45px;
   font-size: 32px;
   line-height: 48px;
+  font-weight: 500;
 `;
+
+export const EmailContainer = styled.div `
+  display: flex;
+  align-items: center;
+
+
+`

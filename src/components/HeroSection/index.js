@@ -6,7 +6,8 @@ import {
   H2,
   HeroContainer,
   Img,
-  P,
+  P, H4,
+  EmailContainer
 } from "./HeroSection";
 import imageWork from "../../Images/work_area.svg";
 
@@ -21,8 +22,10 @@ const HeroSection = () => {
           exceptional team player, willing to maintain extensive communication,
           and always give my best.
         </P>
-        <h4>Email</h4>
-        <P>karen.myllena@gmail.com</P>
+        <EmailContainer>
+          <H4>Email</H4>
+          <P>karen.myllena@gmail.com</P>
+        </EmailContainer>
         <ButtonContainer>
           <Button>Hire Me</Button>
           <Button primary>Download CV</Button>
