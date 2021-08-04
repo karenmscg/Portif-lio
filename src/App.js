@@ -22,8 +22,8 @@ function App() {
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyle />
         <ThemeChanger>
+          <Navbar />{" "}
           <Button onClick={() => themeToggler()}> My Dark Mode </Button>
-          <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/ about" exact component={About} />

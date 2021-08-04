@@ -48,7 +48,7 @@ export const NavMenu = styled.ul`
     height: 100%;
     z-index: 999;
     left: ${({ open }) => (open ? 0 : "-100%")};
-    top: 87px;
+    top: 63px;
     background-color: blueviolet;
   }
 `;
