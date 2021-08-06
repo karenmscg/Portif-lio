@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <Menu>
-      <Link to="/">
+      <Link to="/" onClick={closeMenu}>
         <img src={logo} />
       </Link>
       <MobileIcon onClick={menuToggle}>

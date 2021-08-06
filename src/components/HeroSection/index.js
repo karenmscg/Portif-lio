@@ -6,8 +6,9 @@ import {
   H2,
   HeroContainer,
   Img,
-  P, H4,
-  EmailContainer
+  P,
+  H4,
+  EmailContainer,
 } from "./HeroSection";
 import imageWork from "../../Images/work_area.svg";
 
@@ -30,7 +31,7 @@ const HeroSection = () => {
           <Button>Hire Me</Button>
           <Button primary>Download CV</Button>
         </ButtonContainer>
-        <Img src={imageWork} />
+        <Img src={imageWork} alt="Woman working with a computer" />
       </HeroContainer>
     </div>
   );

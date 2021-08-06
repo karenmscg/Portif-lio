@@ -61,18 +61,21 @@ export const NavLinks = styled(Link)`
   margin-top: 20px;
   margin-right: 20px;
 
+
   &:hover {
-    text-decoration: underline;
-    color: purple;
+    border-bottom: purple;
+    color: white;
     font-weight: bold;
   }
 
   @media screen and (max-width: 780px) {
-    display: table;
+    display: flex;
     color: white;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-      color: blue;
+      transform: scale(1.3);
     }
   }
 `;

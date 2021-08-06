@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./components/DarkMode";
 import { ThemeChanger } from "./components/DarkMode/ThemeStyles";
-import {SwitchContainer, Input, Slider } from './components/Switch/Switch'
+import {SwitchContainer, Input, Slider, SwitchPosition } from './components/Switch/Switch'
 import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
 import Works from "./components/Pages/Works";
@@ -23,10 +23,11 @@ function App() {
     <GlobalStyle />
     <ThemeChanger>
       <Navbar />
+      <SwitchPosition>
       <SwitchContainer>
         <Input type="checkbox" onChange={() => themeToggler()} />
         <Slider />
-      </SwitchContainer>
+      </SwitchContainer></SwitchPosition>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />

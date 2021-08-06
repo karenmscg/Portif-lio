@@ -3,8 +3,10 @@ import vector from "../../Images/Vector.svg";
 
 export const HeroContainer = styled.div`
   padding-left: 5%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 3px;
   background-image: url(${vector});
   background-repeat: no-repeat;
@@ -12,7 +14,11 @@ export const HeroContainer = styled.div`
   background-position-y: 100%;
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+display:flex;
+flex-wrap: wrap;
+`;
+
 
 export const Button = styled.button`
   background: ${(props) => (props.primary ? "#EE5CE6" : "transparent")};
@@ -43,9 +49,9 @@ export const P = styled.p`
   color: #888888;
 `;
 
-export const H4 = styled.h4 `
- margin-right: 2px;
-`
+export const H4 = styled.h4`
+  margin-right: 1%;
+`;
 
 export const H1 = styled.h1`
   font-size: 48px;
@@ -62,9 +68,9 @@ export const H2 = styled.h2`
   font-weight: 500;
 `;
 
-export const EmailContainer = styled.div `
+export const EmailContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+`;
 
-
-`
