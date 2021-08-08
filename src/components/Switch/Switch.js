@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const SwitchPosition = styled.div`
+  position: absolute ;
   left: 65%;
-  position: fixed;
-  top: 20%;
-  display: sticky;
+  display: flex;
+  top: 22%;
+
+  @media screen and (max-width: 880px) {
+  position: relative;
+  right: 0px;
+  }
   
 `;
 
@@ -53,7 +58,7 @@ export const Input = styled.input`
 
     &:before {
       left: 40px;
-      transition: 0.2s;
+      transition: 0.5s;
     }
   }
 `;

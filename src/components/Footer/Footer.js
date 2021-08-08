@@ -9,6 +9,11 @@ export const FooterContainer = styled.div`
   justify-content: center;
   align-items: center; 
   z-index: top;
+
+  @media screen and (max-width: 880px) {
+    padding: 1rem 0 1rem 0
+  }
+
 `;
 
 export const MidiasSociais = styled.div``;

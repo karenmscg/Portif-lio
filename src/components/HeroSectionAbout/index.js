@@ -1,14 +1,15 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
-import { P, Img } from "../HeroSection/HeroSection";
-import myselImage from "../../Images/myself_pictures.jpeg";
+
+import { AboutContainer } from './HeroSectionAbout'
+import { P } from "../HeroSection/HeroSection";
 import reactLogo from "../../Images/react.svg";
 import jsLogo from "../../Images/javascript.svg";
 import htmlLogo from "../../Images/html5.svg";
 
 const HeroSectionAbout = () => {
   return (
-    <div>
+    <AboutContainer>
       <h1>About Me</h1>
       <P>
         iN THIS SECTION WRITE SOMETHING RELATED TO YOUR PROFESSIONAL SIDE: I
@@ -23,8 +24,7 @@ const HeroSectionAbout = () => {
       <img src={reactLogo} />
       <img src={jsLogo} />
       <img src={htmlLogo} />
-      <Img src={myselImage} />
-    </div>
+    </AboutContainer>
   );
 };
 
