@@ -1,29 +1,22 @@
 import styled from "styled-components";
-import vector from "../../Images/Vector.svg";
-
 
 export const HeroContainer = styled.div`
   padding-left: 5%;
-  height: 80%;
-  display: flex;
+  width: 100%;
+  display: grid;
   flex-direction: column;
   margin-bottom: 3px;
-  background-image: url(${vector});
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 100%;
-
- 
+  padding-top: 3%;
 `;
 
 export const ButtonContainer = styled.div`
-display:flex;
-flex-wrap: wrap;
-width: fit-content;
-padding-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  padding-top: 2%;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background: ${(props) => (props.primary ? "#EE5CE6" : "transparent")};
   color: ${(props) => (props.primary ? "white" : "palevioletred")};
   width: 122px;
@@ -31,8 +24,10 @@ export const Button = styled.button`
   border: 1.5px solid #ee5ce6;
   box-sizing: border-box;
   border-radius: 10px;
-  margin-right: 5px;
-  cursor: pointer;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
 
   &:hover {
     color: black;
@@ -41,22 +36,30 @@ export const Button = styled.button`
 `;
 
 export const Img = styled.img`
-  right: -25px;
-  width: 100vw;
-  height: 45vh;
-  
+  object-fit: cover;
+  margin-left: 65%;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 970px) {
+    margin:auto;
     width: 95%;
-    height: fit-content;
   }
 `;
+
+export const ImgAbout = styled.img `
+width: 50%;
+height: 50%;
+margin-left: 50%;
+;`
 
 export const P = styled.p`
   width: 70%;
   font-weight: 400 bolder;
   color: #888888;
-  
+  font-size: 20px;
+
+  @media screen and (max-width: 680px) {
+    font-size: 15px;
+  }
 `;
 
 export const H4 = styled.h4`
@@ -81,7 +84,6 @@ export const H2 = styled.h2`
   }
 
   @media screen and (min-width: 1148px) {
-
   }
 `;
 
@@ -91,4 +93,3 @@ export const EmailContainer = styled.div`
   flex-wrap: wrap;
   padding-top: 2%;
 `;
-

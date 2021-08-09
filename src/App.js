@@ -5,9 +5,7 @@ import Works from "./components/Pages/Works";
 import Navbar from "./components/Menu";
 import Footer from "./components/Footer";
 
-
 function App() {
-  
   return (
     <Router>
       <Navbar />
@@ -17,7 +15,7 @@ function App() {
         <Route path="/works" component={Works} />
       </Switch>
       <Footer />
-</Router>
+    </Router>
   );
 }
 

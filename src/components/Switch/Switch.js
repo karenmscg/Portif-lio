@@ -1,15 +1,6 @@
 import styled from "styled-components";
 
 export const SwitchPosition = styled.div`
-  position: absolute ;
-  left: 65%;
-  display: flex;
-  top: 22%;
-
-  @media screen and (max-width: 880px) {
-  position: relative;
-  right: 0px;
-  }
   
 `;
 
