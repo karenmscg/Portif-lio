@@ -1,30 +1,36 @@
 import styled from "styled-components";
-import vector from "../../Images/Vector.svg";
+import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io";
+import { FaGraduationCap, FaReact } from "react-icons/fa";
 
 export const HeroContainer = styled.div`
   padding-left: 5%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3px;
-  background-image: url(${vector});
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 100%;
+  width: 100%;
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 18%;
+  padding-top: 2%;
+  justify-content: space-between;
 
-export const Button = styled.button`
+  @media screen and (max-width: 780px) {
+    width: fit-content;
+  }
+`;
+
+export const Button = styled.a`
   background: ${(props) => (props.primary ? "#EE5CE6" : "transparent")};
   color: ${(props) => (props.primary ? "white" : "palevioletred")};
   width: 122px;
   height: 30px;
   border: 1.5px solid #ee5ce6;
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.5));
   border-radius: 10px;
-  margin-right: 5px;
-  cursor: pointer;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
 
   &:hover {
     color: black;
@@ -32,27 +38,64 @@ export const Button = styled.button`
   }
 `;
 
-export const Img = styled.img`
-  margin-right: 0px;
-  width: 95vw;
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+
+  width: 100%;
+  @media screen and (max-width: 780px) {
+    flex-direction: row;
+  }
+`;
+
+export const Img = styled.img``;
+
+export const ImgAbout = styled.img`
+  width: 40vw;
+  border-radius: 300px;
+  background-color: linear-gradient(to right, red, purple);
+  overflow: hidden;
+  filter: saturate(0);
+  padding: 5% 5% 3% 0;
+
+  &:hover {
+    filter: saturate(1);
+    transition: ease 0.3s all;
+  }
+
+  @media screen and (max-width: 780px) {
+    object-fit: scale-down;
+  }
 `;
 
 export const P = styled.p`
   width: 70%;
-  font-weight: 400 bold;
+  font-weight: 400 bolder;
   color: #888888;
+  font-size: 20px;
+  margin: 0;
+
+  @media screen and (max-width: 680px) {
+    font-size: 15px;
+  }
 `;
 
-export const H4 = styled.h4 `
- margin-right: 2px;
-`
+export const H4 = styled.h4`
+  margin-right: 1%;
+  width: 70%;
+  font-weight: 400 bolder;
+  font-size: 20px;
+
+  @media screen and (max-width: 680px) {
+    font-size: 15px;
+  }
+`;
 
 export const H1 = styled.h1`
   font-size: 48px;
-  line-height: 72px;
   font-weight: 800;
   color: #8a599b;
-  margin: 2px;
+  padding-bottom: 2%;
 `;
 
 export const H2 = styled.h2`
@@ -60,11 +103,55 @@ export const H2 = styled.h2`
   font-size: 32px;
   line-height: 48px;
   font-weight: 500;
+
+  @media screen and (max-width: 680px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 1148px) {
+  }
 `;
 
-export const EmailContainer = styled.div `
+export const EmailContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2%;
+`;
 
+export const IoJS = styled(IoLogoJavascript)`
+  background-color: yellow;
+  font-size: 3rem;
+  color: black;
+`;
 
-`
+export const Html5 = styled(IoLogoHtml5)`
+  font-size: 3rem;
+  color: orange;
+`;
+export const React = styled(FaReact)`
+  font-size: 3rem;
+  color: aqua;
+`;
+export const GraduationCap = styled(FaGraduationCap)`
+  font-size: 3rem;
+  color: navy;
+  background-color: violet;
+  background-size: 10rem;
+  border-radius: 100%;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-content: center;
+
+  @media screen and (max-width: 980px) {
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+`;
+export const Graduation = styled.div`
+  border-right: solid 5px #8a599b;
+  height: fit-content;
+`;
+export const Tecnologies = styled.div``;
