@@ -20,6 +20,7 @@ import {
   P,
   H4,
   EmailContainer,
+  ImgContainer,
 } from "../HeroSection/HeroSection";
 
 import imageWork from "../../Images/work_area.svg";
@@ -44,8 +45,14 @@ const Home = () => {
     background-position-y: 100%;
   `;
 
+  const h2 = "Hello, my name is Káren.";
+  const h1 = "Front-end Developer ";
+  const h4 = "Email";
+  const adress = "karen.myllena@gmail.com";
   const text = `${
-    theme === "light" ? "Hello My name is Káren" : "hello my name is Myllena"
+    theme === "light"
+      ? "I love creating new thins and getting into new projects. I consider myself an exceptional team player, willing to maintain extensive communication, and always give my best."
+      : "I love meet new people and new cultures. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }`;
 
   return (
@@ -60,12 +67,12 @@ const Home = () => {
             </SwitchContainer>
           </SwitchPosition>
           <HeroContainerImg>
-            <H2>Hello, My name is Káren.</H2>
-            <H1>Front-end Developer </H1>
+            <H2>{h2}</H2>
+            <H1>{h1}</H1>
             <P>{text}</P>
             <EmailContainer>
-              <H4>Email</H4>
-              <P>karen.myllena@gmail.com</P>
+              <H4>{h4}</H4>
+              <P>{adress}</P>
             </EmailContainer>
             <ButtonContainer>
               <Button>Hire Me</Button>
@@ -77,14 +84,16 @@ const Home = () => {
                 Download CV
               </Button>
             </ButtonContainer>
-            <Img
-              src={theme === "light" ? imageWork : discovery}
-              alt={
-                theme === "light"
-                  ? "Image of a woman working with computer"
-                  : "Image of woman in mountains"
-              }
-            />
+            <ImgContainer>
+              <Img
+                src={theme === "light" ? imageWork : discovery}
+                alt={
+                  theme === "light"
+                    ? "Image of a woman working with computer"
+                    : "Image of woman in mountains"
+                }
+              />
+            </ImgContainer>
           </HeroContainerImg>
         </ThemeChanger>
       </ThemeProvider>
