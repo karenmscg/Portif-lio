@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Menu, NavLinks, MobileIcon, NavMenu } from "./Menu";
+import { Menu, NavLinks, MobileIcon, NavMenu,Logo } from "./Menu";
 import logo from "../../Images/Logo.svg";
 
 const Navbar = () => {
@@ -18,9 +18,9 @@ const Navbar = () => {
 
   return (
     <Menu>
-      <Link to="/">
-        <img src={logo} />
-      </Link>
+      <Logo to="/" onClick={closeMenu}>
+        <img src={logo} alt='Colored Mouth' />
+      </Logo>
       <MobileIcon onClick={menuToggle}>
         {open ? <FaTimes /> : <FaBars />}
       </MobileIcon>

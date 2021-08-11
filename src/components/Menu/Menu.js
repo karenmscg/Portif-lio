@@ -9,8 +9,9 @@ export const Menu = styled.menu`
   border-bottom-color: purple;
   display: flex;
   align-items: center;
-  margin: 0;
   background-color: #F3CFFF;
+  position: fixed;
+  z-index: 10;
 
   @media screen and (max-width: 780px) {
     transition: 0.8s all ease;
@@ -38,19 +39,25 @@ export const NavMenu = styled.ul`
     transition: 0.8s all ease;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     text-align: center;
     font-weight: bolder;
-    opacity: 0.9;
+    opacity: 0.97;
     transition: all 0.4s ease-in;
-    width: 90%;
-    height:80vh;
+    width: 40%;
+    height:100%;
     z-index: 5;
     left: ${({ open }) => (open ? 0 : "-100%")};
     top: 63px;
     background-color: #B026FF;
   }
 `;
+
+export const Logo = styled(Link) `
+ &:hover{
+   transform: scale(1.2);
+ }
+`
 
 export const NavLinks = styled(Link)`
   font-size: 16px;
@@ -61,18 +68,23 @@ export const NavLinks = styled(Link)`
   margin-top: 20px;
   margin-right: 20px;
 
+
   &:hover {
-    text-decoration: underline;
-    color: purple;
+    border-bottom: purple;
+    color: white;
     font-weight: bold;
   }
 
   @media screen and (max-width: 780px) {
-    display: table;
+    display: flex;
     color: white;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-      color: blue;
+      transform: scale(1.3);
+      transition: 0.5s all ease;
     }
+
   }
 `;
