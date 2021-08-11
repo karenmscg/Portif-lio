@@ -5,11 +5,15 @@ import { SiNextDotJs, SiJavascript } from "react-icons/si";
 
 export const HeroContainerAbout = styled.div`
   padding: 13% 0% 0% 5%;
-`;
-export const SwitchTitleContainer = styled.div`
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+  height: max-content;
+
+  @media screen and (max-width: 420px){
+      padding-top: 25%
+  }
+
+  @media screen and (min-width: 1200px){
+      padding-top: 8%;
+  }
 `;
 
 export const ImgAbout = styled.img`
@@ -34,22 +38,27 @@ export const P = styled.p`
   width: 80%;
   color: #888888;
   margin-bottom: 5px;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 26px;
+    width: 70%;
+  }
 `;
 
 export const IoJS = styled(SiJavascript)`
   background-color: black;
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: yellow;
   margin: 0px 5px 5px 0px;
 `;
 
 export const Html5 = styled(IoLogoHtml5)`
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: orange;
   margin: 0px 5px 5px 0px;
 `;
 export const React = styled(FaReact)`
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: #44c7de;
   margin: 0px 5px 5px 0px;
 `;
@@ -64,12 +73,12 @@ export const GraduationCap = styled(FaGraduationCap)`
 
 export const Css = styled(FaCss3Alt)`
   color: #2993ee;
-  font-size: 3rem;
+  font-size: 2.7rem;
   margin: 0px 5px 5px 0px;
 `;
 
 export const NextJs = styled(SiNextDotJs)`
-  font-size: 3rem;
+  font-size: 2.7rem;
 `;
 
 export const Container = styled.div`
@@ -94,6 +103,7 @@ export const Technologies = styled.div`
   @media screen and (max-width: 970px) {
     border-left: none;
     padding-left: 0;
+    padding-bottom: 10%;
   }
 `;
 

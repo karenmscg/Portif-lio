@@ -5,7 +5,7 @@ import {
   Slider,
   SwitchPosition,
 } from "../Switch/Switch";
-import { H1, H2 } from "../HeroSection/HeroSection";
+import { H1, H2,SwitchTitleContainer } from "../HeroSection/HeroSection";
 import ThemeContext from "../ThemeContext/ThemeContext";
 import {
   HeroContainerAbout,
@@ -22,7 +22,6 @@ import {
   TechnologiesContent,
   NextJs,
   Css,
-  SwitchTitleContainer,
 } from "../HeroSectionAbout/HeroSectionAbout";
 import nightGirl from "../../Images/universeGirl.svg";
 import myselfPhoto from "../../Images/myself_pictures.jpeg";

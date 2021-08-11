@@ -4,9 +4,8 @@ export const SwitchTitleContainer = styled.div`
 display: flex;
 align-items: center;
 flex-wrap: wrap;
+padding-bottom: 2%;
 `;
-
-
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -73,6 +72,11 @@ export const P = styled.p`
   @media screen and (max-width: 680px) {
     font-size: 15px;
   }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 26px;
+    width: 70%;
+  }
 `;
 
 export const H4 = styled.h4`
@@ -90,7 +94,7 @@ export const H1 = styled.h1`
   font-size: 48px;
   font-weight: 800;
   color: #8a599b;
-  padding-bottom: 2%;
+  margin-right: 5px;
 `;
 
 export const H2 = styled.h2`

@@ -4,7 +4,6 @@ import {
   SwitchContainer,
   Input,
   Slider,
-  SwitchPosition,
 } from "../Switch/Switch";
 import {
   Button,
@@ -55,12 +54,10 @@ const Home = () => {
             <H2>{h2}</H2>
             <SwitchTitleContainer>
               <H1>{h1}</H1>
-              <SwitchPosition>
                 <SwitchContainer>
                   <Input type="checkbox" onChange={() => themeToggler()} />
                   <Slider />
                 </SwitchContainer>
-              </SwitchPosition>
             </SwitchTitleContainer>
             <P>{text}</P>
             <EmailContainer>
