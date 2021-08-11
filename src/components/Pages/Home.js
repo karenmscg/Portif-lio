@@ -1,10 +1,6 @@
-import { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
 import styled from "styled-components";
 
-import { GlobalStyle } from "../../globalstyles";
-import { lightTheme, darkTheme } from "../DarkMode";
-import { ThemeChanger } from "../DarkMode/ThemeStyles";
 import {
   SwitchContainer,
   Input,
@@ -28,12 +24,10 @@ import discovery from "../../Images/discovery.svg";
 import vectorDay from "../../Images/VectorDay.svg";
 import vectorNight from "../../Images/VectorNight.svg";
 
-const Home = () => {
-  const [theme, setTheme] = useState("light");
+import ThemeContext from "../../ThemeContext";
 
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+const Home = () => {
+  const { theme, themeToggler } = useContext(ThemeContext);
 
   //HeroContainerImg is on this section because the property 'light'
   const HeroContainerImg = styled.div`
@@ -56,48 +50,43 @@ const Home = () => {
   }`;
 
   return (
-    <div>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <ThemeChanger>
-          <SwitchPosition>
-            <SwitchContainer>
-              <Input type="checkbox" onChange={() => themeToggler()} />
-              <Slider />
-            </SwitchContainer>
-          </SwitchPosition>
-          <HeroContainerImg>
-            <H2>{h2}</H2>
-            <H1>{h1}</H1>
-            <P>{text}</P>
-            <EmailContainer>
-              <H4>{h4}</H4>
-              <P>{adress}</P>
-            </EmailContainer>
-            <ButtonContainer>
-              <Button>Hire Me</Button>
-              <Button
-                primary
-                href="../../../PDF/Atividade IPV4.pdf"
-                target="_blank"
-              >
-                Download CV
-              </Button>
-            </ButtonContainer>
-            <ImgContainer>
-              <Img
-                src={theme === "light" ? imageWork : discovery}
-                alt={
-                  theme === "light"
-                    ? "Image of a woman working with computer"
-                    : "Image of woman in mountains"
-                }
-              />
-            </ImgContainer>
-          </HeroContainerImg>
-        </ThemeChanger>
-      </ThemeProvider>
-    </div>
+    <>
+      <SwitchPosition>
+        <SwitchContainer>
+          <Input type="checkbox" onChange={() => themeToggler()} />
+          <Slider />
+        </SwitchContainer>
+      </SwitchPosition>
+      <HeroContainerImg>
+        <H2>{h2}</H2>
+        <H1>{h1}</H1>
+        <P>{text}</P>
+        <EmailContainer>
+          <H4>{h4}</H4>
+          <P>{adress}</P>
+        </EmailContainer>
+        <ButtonContainer>
+          <Button>Hire Me</Button>
+          <Button
+            primary
+            href="../../../PDF/Atividade IPV4.pdf"
+            target="_blank"
+          >
+            Download CV
+          </Button>
+        </ButtonContainer>
+        <ImgContainer>
+          <Img
+            src={theme === "light" ? imageWork : discovery}
+            alt={
+              theme === "light"
+                ? "Image of a woman working with computer"
+                : "Image of woman in mountains"
+            }
+          />
+        </ImgContainer>
+      </HeroContainerImg>
+    </>
   );
 };
 

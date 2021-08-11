@@ -1,8 +1,4 @@
-import { useState } from "react";
-import { GlobalStyle } from "../../globalstyles";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../DarkMode";
-import { ThemeChanger } from "../DarkMode/ThemeStyles";
+import { useContext } from "react";
 import {
   SwitchContainer,
   Input,
@@ -22,17 +18,15 @@ import {
   Container,
   Graduation,
   Tecnologies,
-  GraduationCap
+  GraduationCap,
 } from "../HeroSection/HeroSection";
 import nightGirl from "../../Images/universeGirl.svg";
 import myselfPhoto from "../../Images/myself_pictures.jpeg";
 
-const About = () => {
-  const [theme, setTheme] = useState("light");
+import ThemeContext from "../../ThemeContext";
 
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+const About = () => {
+  const { theme, themeToggler } = useContext(ThemeContext);
 
   const text = `${
     theme === "light"
@@ -41,46 +35,44 @@ const About = () => {
   }`;
 
   return (
-    <div>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <ThemeChanger>
-          <HeroContainer>
-            <SwitchPosition>
-              <SwitchContainer>
-                <Input type="checkbox" onChange={() => themeToggler()} />
-                <Slider />
-              </SwitchContainer>
-            </SwitchPosition>
-            <H1>About Me</H1>
-            <P>{text}</P>
-            <Container>
-              <Graduation>
-              <H2>Graduation</H2>
-              <GraduationCap />
-              <P>
-                Information Systems 2018-2023 State University of Montes Claros
-              </P></Graduation><Tecnologies>
-              <H2>Technologies</H2>
-              <P>Some technologies that I like to work:</P>
-              <React />
-              <IoJS />
-              <Html5 /></Tecnologies>
-              <ImgContainer>
-                <ImgAbout
-                  src={theme === "light" ? myselfPhoto : nightGirl}
-                  alt={
-                    theme === "light"
-                      ? "This Káren Myllena Gonçalves"
-                      : "Girl with universe on her hair"
-                  }
-                />
-              </ImgContainer>
-            </Container>
-          </HeroContainer>
-        </ThemeChanger>
-      </ThemeProvider>
-    </div>
+    <>
+      <HeroContainer>
+        <SwitchPosition>
+          <SwitchContainer>
+            <Input type="checkbox" onChange={() => themeToggler()} />
+            <Slider />
+          </SwitchContainer>
+        </SwitchPosition>
+        <H1>About Me</H1>
+        <P>{text}</P>
+        <Container>
+          <Graduation>
+            <H2>Graduation</H2>
+            <GraduationCap />
+            <P>
+              Information Systems 2018-2023 State University of Montes Claros
+            </P>
+          </Graduation>
+          <Tecnologies>
+            <H2>Technologies</H2>
+            <P>Some technologies that I like to work:</P>
+            <React />
+            <IoJS />
+            <Html5 />
+          </Tecnologies>
+          <ImgContainer>
+            <ImgAbout
+              src={theme === "light" ? myselfPhoto : nightGirl}
+              alt={
+                theme === "light"
+                  ? "This Káren Myllena Gonçalves"
+                  : "Girl with universe on her hair"
+              }
+            />
+          </ImgContainer>
+        </Container>
+      </HeroContainer>
+    </>
   );
 };
 
