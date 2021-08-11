@@ -4,7 +4,7 @@ import { FaGraduationCap, FaReact, FaCss3Alt } from "react-icons/fa";
 import { SiNextDotJs, SiJavascript } from "react-icons/si";
 
 export const HeroContainerAbout = styled.div`
-  padding: 5%;
+  padding: 13% 0% 0% 5%;
 `;
 export const SwitchTitleContainer = styled.div`
 display: flex;

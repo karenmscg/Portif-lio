@@ -1,8 +1,4 @@
-import { useState } from "react";
-import { GlobalStyle } from "../../globalstyles";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../DarkMode";
-import { ThemeChanger } from "../DarkMode/ThemeStyles";
+import { useContext } from "react";
 import {
   SwitchContainer,
   Input,
@@ -10,6 +6,7 @@ import {
   SwitchPosition,
 } from "../Switch/Switch";
 import { H1, H2 } from "../HeroSection/HeroSection";
+import ThemeContext from "../ThemeContext/ThemeContext";
 import {
   HeroContainerAbout,
   ImgAbout,
@@ -31,11 +28,7 @@ import nightGirl from "../../Images/universeGirl.svg";
 import myselfPhoto from "../../Images/myself_pictures.jpeg";
 
 const About = () => {
-  const [theme, setTheme] = useState("light");
-
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+  const { theme, themeToggler } = useContext(ThemeContext);
 
   const h1 = "About me";
   const p1 = "Information Systems 2018-2023 State University of Montes Claros";
@@ -46,11 +39,8 @@ const About = () => {
   }`;
 
   return (
-    <div>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyle />
+    <>
         <HeroContainerAbout>
-          <ThemeChanger>
             <SwitchTitleContainer>
               <H1>{h1}</H1>
               <SwitchPosition>
@@ -87,10 +77,8 @@ const About = () => {
                 }
               />
             </Container>
-          </ThemeChanger>
         </HeroContainerAbout>
-      </ThemeProvider>
-    </div>
+    </>
   );
 };
 

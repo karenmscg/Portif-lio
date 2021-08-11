@@ -6,10 +6,7 @@ align-items: center;
 flex-wrap: wrap;
 `;
 
-export const HeroContainer = styled.div`
-  padding-left: 5%;
-  width: 100%;
-`;
+
 
 export const ButtonContainer = styled.div`
   display: flex;

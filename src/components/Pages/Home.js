@@ -1,10 +1,5 @@
-import { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import { useState, useContext } from "react";
 import styled from "styled-components";
-
-import { GlobalStyle } from "../../globalstyles";
-import { lightTheme, darkTheme } from "../DarkMode";
-import { ThemeChanger } from "../DarkMode/ThemeStyles";
 import {
   SwitchContainer,
   Input,
@@ -28,17 +23,15 @@ import imageWork from "../../Images/work_area.svg";
 import discovery from "../../Images/discovery.svg";
 import vectorDay from "../../Images/VectorDay.svg";
 import vectorNight from "../../Images/VectorNight.svg";
+import ThemeContext from "../ThemeContext/ThemeContext";
 
 const Home = () => {
-  const [theme, setTheme] = useState("light");
+  const { theme, themeToggler } = useContext(ThemeContext);
 
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
 
   //HeroContainerImg is on this section because the property 'light'
   const HeroContainerImg = styled.div`
-    padding-left: 5%;
+    padding: 5% 0% 0% 5%;
     position: relative;
     background-image: url(${theme === "light" ? vectorDay : vectorNight});
     background-repeat: no-repeat;
@@ -57,10 +50,7 @@ const Home = () => {
   }`;
 
   return (
-    <div>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <GlobalStyle />
-        <ThemeChanger>
+    <>
           <HeroContainerImg>
             <H2>{h2}</H2>
             <SwitchTitleContainer>
@@ -98,9 +88,7 @@ const Home = () => {
               />
             </ImgContainer>
           </HeroContainerImg>
-        </ThemeChanger>
-      </ThemeProvider>
-    </div>
+    </>
   );
 };
 

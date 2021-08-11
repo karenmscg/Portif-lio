@@ -9,7 +9,7 @@ export const Menu = styled.menu`
   border-bottom-color: purple;
   display: flex;
   align-items: center;
-  margin: 0;
+  margin-bottom: 15%;
   background-color: #F3CFFF;
   position: fixed;
   z-index: 10;
