@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const SwitchTitleContainer = styled.div`
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+`;
+
 export const HeroContainer = styled.div`
   padding-left: 5%;
   width: 100%;

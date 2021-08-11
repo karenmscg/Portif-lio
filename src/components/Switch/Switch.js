@@ -15,15 +15,8 @@ export const SwitchContainer = styled.label`
 `;
 
 export const Slider = styled.span`
-  position: absolute;
+  position: flex;
   cursor: pointer;
-
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  background-color: #ccc;
   transition: 0.4s;
 
   &:before {
@@ -34,7 +27,7 @@ export const Slider = styled.span`
     left: 4px;
     right: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: pink;
     border-radius: 50%;
   }
 `;

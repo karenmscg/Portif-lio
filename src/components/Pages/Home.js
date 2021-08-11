@@ -21,6 +21,7 @@ import {
   H4,
   EmailContainer,
   ImgContainer,
+  SwitchTitleContainer,
 } from "../HeroSection/HeroSection";
 
 import imageWork from "../../Images/work_area.svg";
@@ -60,15 +61,17 @@ const Home = () => {
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyle />
         <ThemeChanger>
-          <SwitchPosition>
-            <SwitchContainer>
-              <Input type="checkbox" onChange={() => themeToggler()} />
-              <Slider />
-            </SwitchContainer>
-          </SwitchPosition>
           <HeroContainerImg>
             <H2>{h2}</H2>
-            <H1>{h1}</H1>
+            <SwitchTitleContainer>
+              <H1>{h1}</H1>
+              <SwitchPosition>
+                <SwitchContainer>
+                  <Input type="checkbox" onChange={() => themeToggler()} />
+                  <Slider />
+                </SwitchContainer>
+              </SwitchPosition>
+            </SwitchTitleContainer>
             <P>{text}</P>
             <EmailContainer>
               <H4>{h4}</H4>

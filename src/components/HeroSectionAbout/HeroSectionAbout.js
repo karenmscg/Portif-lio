@@ -1,7 +1,16 @@
 import styled from "styled-components";
-import {  IoLogoHtml5 } from "react-icons/io";
+import { IoLogoHtml5 } from "react-icons/io";
 import { FaGraduationCap, FaReact, FaCss3Alt } from "react-icons/fa";
 import { SiNextDotJs, SiJavascript } from "react-icons/si";
+
+export const HeroContainerAbout = styled.div`
+  padding: 5%;
+`;
+export const SwitchTitleContainer = styled.div`
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+`;
 
 export const ImgAbout = styled.img`
   width: 40vw;
@@ -31,18 +40,18 @@ export const IoJS = styled(SiJavascript)`
   background-color: black;
   font-size: 3rem;
   color: yellow;
-  margin:0px 5px 5px 0px;
+  margin: 0px 5px 5px 0px;
 `;
 
 export const Html5 = styled(IoLogoHtml5)`
   font-size: 3rem;
   color: orange;
-  margin:0px 5px 5px 0px;
+  margin: 0px 5px 5px 0px;
 `;
 export const React = styled(FaReact)`
   font-size: 3rem;
-  color: #44C7DE;
-  margin:0px 5px 5px 0px;
+  color: #44c7de;
+  margin: 0px 5px 5px 0px;
 `;
 export const GraduationCap = styled(FaGraduationCap)`
   font-size: 2.5rem;
@@ -50,18 +59,18 @@ export const GraduationCap = styled(FaGraduationCap)`
   background-color: violet;
   background-size: 10rem;
   border-radius: 100%;
-  margin:0px 5px 5px 0px;
+  margin: 0px 5px 5px 0px;
 `;
 
 export const Css = styled(FaCss3Alt)`
-color: #2993EE;
-font-size: 3rem;
-margin:0px 5px 5px 0px;
-`
+  color: #2993ee;
+  font-size: 3rem;
+  margin: 0px 5px 5px 0px;
+`;
 
 export const NextJs = styled(SiNextDotJs)`
-font-size: 3rem;
-`
+  font-size: 3rem;
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -94,8 +103,8 @@ export const GraduationContent = styled.div`
   flex-wrap: wrap;
 `;
 
-export const TechnologiesContent = styled.div `
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-`
+export const TechnologiesContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;

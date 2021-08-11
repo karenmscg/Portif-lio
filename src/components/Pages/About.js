@@ -9,8 +9,9 @@ import {
   Slider,
   SwitchPosition,
 } from "../Switch/Switch";
-import { HeroContainer, H1, H2 } from "../HeroSection/HeroSection";
+import { H1, H2 } from "../HeroSection/HeroSection";
 import {
+  HeroContainerAbout,
   ImgAbout,
   IoJS,
   Html5,
@@ -24,6 +25,7 @@ import {
   TechnologiesContent,
   NextJs,
   Css,
+  SwitchTitleContainer,
 } from "../HeroSectionAbout/HeroSectionAbout";
 import nightGirl from "../../Images/universeGirl.svg";
 import myselfPhoto from "../../Images/myself_pictures.jpeg";
@@ -47,15 +49,17 @@ const About = () => {
     <div>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyle />
-        <ThemeChanger>
-          <HeroContainer>
-            <SwitchPosition>
-              <SwitchContainer>
-                <Input type="checkbox" onChange={() => themeToggler()} />
-                <Slider />
-              </SwitchContainer>
-            </SwitchPosition>
-            <H1>{h1}</H1>
+        <HeroContainerAbout>
+          <ThemeChanger>
+            <SwitchTitleContainer>
+              <H1>{h1}</H1>
+              <SwitchPosition>
+                <SwitchContainer>
+                  <Input type="checkbox" onChange={() => themeToggler()} />
+                  <Slider />
+                </SwitchContainer>
+              </SwitchPosition>
+            </SwitchTitleContainer>
             <P>{text}</P>
             <Container>
               <Graduation>
@@ -83,8 +87,8 @@ const About = () => {
                 }
               />
             </Container>
-          </HeroContainer>
-        </ThemeChanger>
+          </ThemeChanger>
+        </HeroContainerAbout>
       </ThemeProvider>
     </div>
   );
