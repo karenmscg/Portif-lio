@@ -9,7 +9,7 @@ import {
   Slider,
   SwitchPosition,
 } from "../Switch/Switch";
-import { P, HeroContainer, H1, H2 } from "../HeroSection/HeroSection";
+import { HeroContainer, H1, H2 } from "../HeroSection/HeroSection";
 import {
   ImgAbout,
   IoJS,
@@ -17,10 +17,14 @@ import {
   React,
   Container,
   Graduation,
-  Tecnologies,
+  Technologies,
   GraduationCap,
+  GraduationContent,
+  P,
+  TechnologiesContent,
+  NextJs,
+  Css,
 } from "../HeroSectionAbout/HeroSectionAbout";
-
 import nightGirl from "../../Images/universeGirl.svg";
 import myselfPhoto from "../../Images/myself_pictures.jpeg";
 
@@ -31,6 +35,8 @@ const About = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  const h1 = "About me";
+  const p1 = "Information Systems 2018-2023 State University of Montes Claros";
   const text = `${
     theme === "light"
       ? `${"I love creating new things and getting into new projects, an exceptional team player, willing to maintain extensive communication, and always give my best."}`
@@ -49,25 +55,25 @@ const About = () => {
                 <Slider />
               </SwitchContainer>
             </SwitchPosition>
-            <H1>About Me</H1>
+            <H1>{h1}</H1>
             <P>{text}</P>
             <Container>
               <Graduation>
                 <H2>Graduation</H2>
-                <GraduationCap />
-                <P>
-                  Information Systems 2018-2023 State University of Montes
-                  Claros
-                </P>
+                <GraduationContent>
+                  <GraduationCap />
+                  <P>{p1}</P>
+                </GraduationContent>
               </Graduation>
-              <Tecnologies>
+              <Technologies>
                 <H2>Technologies</H2>
                 <P>Some technologies that I like to work:</P>
-                <React />
-                <IoJS />
-                <Html5 />
-              </Tecnologies>
-
+                <TechnologiesContent>
+                  <React />
+                  <IoJS /> <NextJs />
+                  <Html5 /> <Css />
+                </TechnologiesContent>
+              </Technologies>
               <ImgAbout
                 src={theme === "light" ? myselfPhoto : nightGirl}
                 alt={
