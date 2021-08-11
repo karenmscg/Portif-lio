@@ -11,6 +11,8 @@ export const Menu = styled.menu`
   align-items: center;
   margin: 0;
   background-color: #F3CFFF;
+  position: fixed;
+  z-index: 10;
 
   @media screen and (max-width: 780px) {
     transition: 0.8s all ease;
@@ -38,7 +40,7 @@ export const NavMenu = styled.ul`
     transition: 0.8s all ease;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     text-align: center;
     font-weight: bolder;
     opacity: 0.97;

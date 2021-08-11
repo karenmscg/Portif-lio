@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io";
-import { FaGraduationCap, FaReact } from "react-icons/fa";
 
 export const HeroContainer = styled.div`
   padding-left: 5%;
@@ -10,13 +8,8 @@ export const HeroContainer = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 18%;
+  width: fit-content;
   padding-top: 2%;
-  justify-content: space-between;
-
-  @media screen and (max-width: 780px) {
-    width: fit-content;
-  }
 `;
 
 export const Button = styled.a`
@@ -41,7 +34,6 @@ export const Button = styled.a`
 export const ImgContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
-
   width: 100%;
   @media screen and (max-width: 780px) {
     flex-direction: row;
@@ -51,7 +43,7 @@ export const ImgContainer = styled.div`
 export const Img = styled.img``;
 
 export const ImgAbout = styled.img`
-  width: 40vw;
+  width: 30vw;
   border-radius: 300px;
   background-color: linear-gradient(to right, red, purple);
   overflow: hidden;
@@ -118,40 +110,3 @@ export const EmailContainer = styled.div`
   flex-wrap: wrap;
   padding-top: 2%;
 `;
-
-export const IoJS = styled(IoLogoJavascript)`
-  background-color: yellow;
-  font-size: 3rem;
-  color: black;
-`;
-
-export const Html5 = styled(IoLogoHtml5)`
-  font-size: 3rem;
-  color: orange;
-`;
-export const React = styled(FaReact)`
-  font-size: 3rem;
-  color: aqua;
-`;
-export const GraduationCap = styled(FaGraduationCap)`
-  font-size: 3rem;
-  color: navy;
-  background-color: violet;
-  background-size: 10rem;
-  border-radius: 100%;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  align-content: center;
-
-  @media screen and (max-width: 980px) {
-    flex-wrap: wrap;
-    justify-content: right;
-  }
-`;
-export const Graduation = styled.div`
-  border-right: solid 5px #8a599b;
-  height: fit-content;
-`;
-export const Tecnologies = styled.div``;
