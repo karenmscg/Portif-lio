@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export const ItemsContainer = styled.div`
+  margin: 5vw auto;
+  width: 100%;
+  padding-right: 5%;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+`;
 
 
 export const Image = styled.img`
